@@ -1,0 +1,14 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    container_name: tickets_db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: tickets
+    volumes:
+      - tickets_data:/var/lib/postgres/data
+volumes:
+  tickets_data:
+    external: false

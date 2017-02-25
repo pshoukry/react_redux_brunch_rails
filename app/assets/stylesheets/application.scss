@@ -1,0 +1,21 @@
+@import "bootstrap";
+
+.menu {
+  flex-flow: row;
+  justify-content: flex-end;
+}
+
+.message {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.subnav {
+  justify-content: space-between;
+  margin: 20pt 0pt 0pt;
+}
+
+.table {
+  margin: 20pt 0pt;
+}

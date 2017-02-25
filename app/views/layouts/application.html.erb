@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tickets</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all'%>
+    <%= javascript_include_tag 'application'%>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script>require('initialize');</script>
+  </head>
+
+  <body>
+    <% if user_signed_in? %>
+      <%= yield %>
+    <% else %>
+      <%= render "shared/navbar" %>
+      <div class="container" style="margin: 20px;">
+        <%= yield %>
+      </div>
+    <% end %>
+  </body>
+</html>
